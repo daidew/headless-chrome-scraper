@@ -10,7 +10,7 @@ PORT = '3000'
 MODE = 'render'
 verbose = False
 overwrite = False
-k = 4
+k = 10
 visited = set()
 
 def scrape(tid):
