@@ -12,7 +12,8 @@ Pantip website changes it's api too constantly, rendering old web scraper to not
 usage: `python3 scrape.py [-h] [-o OVERWRITE] [-a ALL] [-v VERBOSE] [-w WORKERS] range a b`
 
 
-*remark: a and b must be in between [30000000, latest_topic_id]
+remark: a and b must be in between [30000000, latest_topic_id]
+
 positional arguments:
 
 - range         scrape the website given tid range [a,b]
