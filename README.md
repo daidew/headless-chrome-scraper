@@ -9,7 +9,7 @@ Pantip website changes it's api too constantly, rendering old web scraper to not
   
 # For scraping
 
-usage: `python3 scrape.py [-h] [-o OVERWRITE] [-a ALL] [-v VERBOSE] [-w WORKERS] range a b` (scrape from tid=30000000+a to 30000000+b)
+usage: `python3 scrape.py [-h] [-o OVERWRITE] [-a ALL] [-v VERBOSE] [-w WORKERS] range a b`
 
 positional arguments:
 
