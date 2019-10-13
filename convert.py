@@ -14,5 +14,7 @@ post_comment = [s.strip() for s in tree.xpath('//div[@class="display-post-story-
 
 print('title:',post_title)
 print('story:',post_story)
-print('comment:',post_comment)
+print('comment:')
+for s in post_comment:
+    print(s)
 
