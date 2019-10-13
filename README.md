@@ -6,6 +6,7 @@ Pantip website changes it's api too constantly, rendering old web scraper to not
 # How to
 - git clone <repo> && cd <this folder>
 - npm install rendertron
+- rendertron
   
 # For scraping
 
