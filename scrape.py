@@ -38,20 +38,20 @@ def scrape(tid):
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser(description='Scrape the Pantip website!')
-    parser.add_argument('range', nargs=2, type=int, help='scrape the website given tid range [a,b]')
-    parser.add_argument('-o','--overwrite', help='enable overwrite all existing storage files')
-    parser.add_argument('-a','--all', help='scrap all tids (approx 9 mil.)')
-    parser.add_argument('-v','--verbose', help='enable verbosity (expressive mode)')
+    parser.add_argument('range', nargs='?', type=int, help='scrape the website given tid range [a,b]')
+    parser.add_argument('-o','--overwrite', action='store_true', help='enable overwrite all existing storage files')
+    parser.add_argument('-a','--all', action='store_true', help='scrap all tids (approx 9 mil.)')
+    parser.add_argument('-v','--verbose', action='store_true', help='enable verbosity (expressive mode)')
     parser.add_argument('-w','--workers', default=10, help='number of workers (multiprocessing)')
 
     args = parser.parse_args()
-    k = args.workers
+    k = int(args.workers)
     if(args.overwrite):
         overwrite = True
     if(args.all):
         end_tid = 39315577
     else:
-        start_tid, end_tid = args.range[0], args.range[1]+1
+        start_tid, end_tid = int(args.range[0]), int(args.range[1])+1
     if args.verbose:
         verbose = True
         print('verbose mode ON')
