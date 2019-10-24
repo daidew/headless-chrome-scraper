@@ -27,9 +27,9 @@ def scrape(tid):
     ERROR_CODE = r.status_code
     if verbose:
         print(f'{tid}: status code returned',ERROR_CODE)
-    if ERROR_CODE != 200:
-        with open('log.txt','a') as f2: #not tested !!
-            f2.write(f'{tid}: got weird status code return {ERROR_CODE}\n')
+    # if ERROR_CODE != 200:
+    #     with open('log.txt','a') as f2: #not tested !!
+    #         f2.write(f'{tid}: got weird status code return {ERROR_CODE}\n')
     with open(os.path.join('html_storage',f'{tid}.html'),'w') as f:
         #save file
         f.writelines(r.text)
@@ -61,11 +61,10 @@ if __name__ == '__main__':
         if(args.all):
             print('scraping ALL tids (this may take some time)')
     try:
-        os.listdir('html_storage')
         if verbose:
             print('Found html_storage directory.')
 
-        visited = set([int(s.split('.')[0]) for s in os.listdir('html_storage')])
+        visited = set([int(s.split('.')[0]) for s in os.listdir('html_storage') if len(s.split('.')[0]) > 0])
     except:
         print('html_storage directory not found. Creating a new directory now')
         os.mkdir('html_storage')
