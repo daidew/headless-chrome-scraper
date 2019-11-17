@@ -19,7 +19,7 @@ for i in tqdm(range(len(files))):
         while True:
             try:
                 with open(os.path.join(parent_folder_name,filename), "r") as f:
-                    file_drive = drive.CreateFile({'title':os.path.basename(f.name), 'parents':[{'id': '1xS4isTv1MQBVmFT1BDbGyS0e1i5_mss2'}] })
+                    file_drive = drive.CreateFile({'title':os.path.basename(f.name), 'parents':[{'id': '<your-drive-folder-id>'}] })
                     file_drive.SetContentString(f.read()) 
                     file_drive.Upload()
                     # print('done uploading', filename)
