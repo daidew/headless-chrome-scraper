@@ -1,7 +1,5 @@
-# Pantip-Scraper
-Pantip scraper using rendertron (headless Chrome)
-
-Pantip website changes it's api too constantly, rendering old web scraper to not work properly after some period of time. So the best web scraper should be operating on the headless browser. 
+# headless-chrome-scraper
+Headless chrome website scraper using rendertron (headless Chrome)
 
 # How to
 - git clone <repo> && cd <this folder>
